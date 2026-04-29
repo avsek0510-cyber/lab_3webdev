@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@700;900&display=swap');
+
+/* ── Reset ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Share Tech Mono', monospace;
+  background-color: #0a0e0d;
+  color: #8ab8a8;
+  min-height: 100vh;
+}
+
+/* ── App wrapper ── */
+.app {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 20px 14px 60px;
+}
+
+/* ════════════════════════
+   HEADER
+════════════════════════ */
+.header {
+  margin-bottom: 22px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #0f2820;
+}
+
+.header-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.28em;
+  color: #00e5b0;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.header-label::before {
+  content: '';
+  display: inline-block;
+  width: 26px;
+  height: 2px;
+  background: #00e5b0;
+}
+
+.header h1 {
+  font-family: 'Orbitron', monospace;
+  font-size: 2.6rem;
+  font-weight: 900;
+  letter-spacing: 0.03em;
+  line-height: 1;
+}
+
+.header h1 .white {
+  color: #ffffff;
+}
+
+.header h1 .cyan {
+  color: #00e5b0;
+  text-shadow: 0 0 20px rgba(0, 229, 176, 0.6), 0 0 40px rgba(0, 229, 176, 0.3);
+}
+
+/* ════════════════════════
+   STATS BAR
+════════════════════════ */
+.stats-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.stat-card {
+  background: #0c1614;
+  border: 1px solid #112820;
+  border-radius: 3px;
+  padding: 10px 14px;
+}
+
+.stat-label {
+  font-size: 0.58rem;
+  letter-spacing: 0.22em;
+  color: #2e6652;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+}
+
+.stat-value {
+  font-family: 'Orbitron', monospace;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #00e5b0;
+  line-height: 1.1;
+}
+
+/* ════════════════════════
+   MAIN LAYOUT
+════════════════════════ */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ════════════════════════
+   PANELS (shared)
+════════════════════════ */
+.form-section,
+.table-section {
+  background: #0c1614;
+  border: 1px solid #112820;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 12px;
+  border-bottom: 1px solid #112820;
+}
+
+.panel-title {
+  font-size: 0.58rem;
+  letter-spacing: 0.2em;
+  color: #2e6652;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.panel-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #00e5b0;
+  box-shadow: 0 0 6px rgba(0, 229, 176, 0.8);
+  flex-shrink: 0;
+}
+
+.panel-meta {
+  font-size: 0.58rem;
+  letter-spacing: 0.18em;
+  color: #1e4438;
+  text-transform: uppercase;
+}
+
+/* ════════════════════════
+   ADD STUDENT FORM
+════════════════════════ */
+.add-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+}
+
+.add-form input {
+  background: transparent;
+  border: none;
+  border-right: 1px solid #112820;
+  padding: 11px 13px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.82rem;
+  color: #8ab8a8;
+  outline: none;
+  width: 100%;
+}
+
+.add-form input::placeholder {
+  color: #1e4438;
+}
+
+.add-form input:focus {
+  background: #0e1e18;
+}
+
+.btn-add {
+  background: transparent;
+  border: none;
+  color: #00e5b0;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  padding: 11px 16px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+
+.btn-add:hover {
+  background: #0f2a22;
+}
+
+/* ════════════════════════
+   STUDENT TABLE
+════════════════════════ */
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+.student-table thead tr {
+  border-bottom: 1px solid #112820;
+}
+
+.student-table th {
+  font-size: 0.57rem;
+  letter-spacing: 0.18em;
+  color: #2e6652;
+  text-transform: uppercase;
+  padding: 7px 12px;
+  text-align: left;
+  font-weight: normal;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.student-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #0e1c18;
+  vertical-align: middle;
+  color: #8ab8a8;
+}
+
+.student-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Left green accent bar on rows */
+.student-table tbody tr {
+  border-left: 2px solid transparent;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.student-table tbody tr:hover {
+  background: #0e1e18;
+  border-left-color: #00e5b0;
+}
+
+/* Score value — yellow/amber */
+.score-val {
+  color: #f5c518;
+  font-family: 'Orbitron', monospace;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+/* ════════════════════════
+   PASS / FAIL BADGES
+════════════════════════ */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 9px 3px 7px;
+  border-radius: 2px;
+  font-size: 0.6rem;
+  font-family: 'Share Tech Mono', monospace;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* PASS — green */
+.badge.pass {
+  background: rgba(0, 200, 100, 0.1);
+  border: 1px solid #00a060;
+  color: #00d878;
+}
+
+.badge.pass::before {
+  background: #00d878;
+  box-shadow: 0 0 5px rgba(0, 216, 120, 0.9);
+}
+
+/* FAIL — red */
+.badge.fail {
+  background: rgba(220, 40, 40, 0.1);
+  border: 1px solid #aa2020;
+  color: #ff4444;
+}
+
+.badge.fail::before {
+  background: #ff4444;
+  box-shadow: 0 0 5px rgba(255, 68, 68, 0.9);
+}
+
+/* ════════════════════════
+   UPDATE CELL
+════════════════════════ */
+.update-cell {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.update-cell input[type="number"] {
+  background: #090d0c;
+  border: 1px solid #112820;
+  color: #8ab8a8;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  width: 58px;
+  border-radius: 2px;
+  outline: none;
+}
+
+.update-cell input[type="number"]::-webkit-inner-spin-button,
+.update-cell input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.update-cell input[type="number"]:focus {
+  border-color: #1e5040;
+}
+
+.btn-save {
+  background: transparent;
+  border: 1px solid #1a3a2e;
+  color: #2e6652;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  padding: 4px 10px;
+  border-radius: 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.btn-save:hover {
+  border-color: #00e5b0;
+  color: #00e5b0;
+  background: #0e2a22;
+}
+
+/* ════════════════════════
+   FOOTER
+════════════════════════ */
+.footer {
+  text-align: center;
+  margin-top: 28px;
+  font-size: 0.57rem;
+  letter-spacing: 0.22em;
+  color: #152820;
+  text-transform: uppercase;
+}
+
+/* ════════════════════════
+   ERROR MESSAGE
+════════════════════════ */
+.error-msg {
+  color: #ff4444;
+  font-size: 0.72rem;
+  padding: 6px 12px;
+  background: rgba(220, 40, 40, 0.07);
+  border-top: 1px solid #3a1010;
+  letter-spacing: 0.05em;
+}
